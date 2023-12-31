@@ -281,7 +281,7 @@ if __name__=="__main__":
         hist, left_base, right_base = plot_histogram(processed_image[3])
         ploty, left_fit, right_fit, left_fitx, right_fitx = slide_window_search(processed_image[3], hist)
         draw_info = general_search(processed_image[3], left_fit, right_fit)
-        curve_rad, curve_dir = measure_lane_curvature(ploty, left_fitx, right_fitx)
+        # curve_rad, curve_dir = measure_lane_curvature(ploty, left_fitx, right_fitx)
         mean_pts, result = draw_lane_lines(frame, processed_image[3], minverse, draw_info)
         deviation, direction_dev = off_center(mean_pts, frame)
         
