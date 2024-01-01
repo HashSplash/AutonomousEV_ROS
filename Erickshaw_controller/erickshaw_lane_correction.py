@@ -17,7 +17,7 @@ def lane_corr(data):
     correction = kp*e + kd*diff
     
 
-if __name__=="__name__":
+if __name__=="__main__":
     rp.init_node("lane_correction_node",anonymous=True)
     rp.loginfo("Following lane")
     r=rp.Rate(10)
@@ -26,4 +26,3 @@ if __name__=="__name__":
     while not rp.is_shutdown():
         pub.publish(correction)
         r.sleep()
-        rp.spin()
